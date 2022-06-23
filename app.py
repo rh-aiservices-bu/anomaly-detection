@@ -1,6 +1,7 @@
 import os
 import json
 from kafka import KafkaConsumer
+from prediction import predict
 
 
 KAFKA_BOOTSTRAP_SERVER = os.getenv('KAFKA_BOOTSTRAP_SERVER')
@@ -45,6 +46,7 @@ def main():
             value = item["value"]
             line = timestamp + "," + value + "\n"
             f.write(line)
+            print(count)
             if (count == int(SAMPLE_SIZE)):
                 print("Running prediction on collected data...")
                 predict(WEBHOOK_URL)

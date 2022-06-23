@@ -5,7 +5,7 @@ from fbprophet import Prophet
 import requests
 
 
-def run_prediction(url):
+def predict(url):
     m = joblib.load('model.pkl')
     future = m.make_future_dataframe(periods=100, freq='H')
     forecast = m.predict(future)
