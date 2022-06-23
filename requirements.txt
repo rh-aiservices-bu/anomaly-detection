@@ -1,2 +1,4 @@
 pystan~=2.14
 fbprophet
+numpy
+pandas
