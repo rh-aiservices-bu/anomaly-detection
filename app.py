@@ -45,7 +45,7 @@ def main():
             value = item["value"]
             line = timestamp + "," + value + "\n"
             f.write(line)
-            if (count == SAMPLE_SIZE):
+            if (count == int(SAMPLE_SIZE)):
                 print("Running prediction on collected data...")
                 predict(WEBHOOK_URL)
                 count = 0
