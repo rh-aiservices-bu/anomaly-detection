@@ -2,6 +2,7 @@ FROM registry.access.redhat.com/ubi8/python-39:latest
 
 COPY requirements.txt ./requirements.txt
 
+RUN pip install wheel
 RUN pip install pystan==2.19.1.1
 RUN pip install -r requirements.txt
 
