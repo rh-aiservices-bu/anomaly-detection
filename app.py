@@ -49,7 +49,7 @@ def main():
             print(count)
             if (count == int(SAMPLE_SIZE)):
                 print("Running prediction on collected data...")
-                predict(WEBHOOK_URL)
+                #predict(WEBHOOK_URL)
                 count = 0
                 f.close()
                 os.remove("batch.csv")
