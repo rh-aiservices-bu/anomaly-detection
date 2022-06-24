@@ -1,5 +1,5 @@
-wheel
-pystan~=2.14
+joblib
+pystan==2.19.1.1
 fbprophet
 numpy
 pandas
